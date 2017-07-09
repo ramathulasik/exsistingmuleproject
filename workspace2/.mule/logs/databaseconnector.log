@@ -1,0 +1,746 @@
+2017-06-25 15:27:34,571 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:27:35,597 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:27:35,927 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:27:36,313 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:27:36,313 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:27:36,545 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@9775a9: startup date [Sun Jun 25 15:27:36 IST 2017]; root of context hierarchy
+2017-06-25 15:27:39,745 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:27:41,599 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:27:41,599 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:27:41,599 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:27:43,869 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-06-25 15:27:45,201 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:27:45,272 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:27:45,583 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:27:45,597 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:27:45,599 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@12c4495
+2017-06-25 15:27:45,758 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:27:46,358 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:27:46,358 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:27:49,543 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:27:49,543 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:27:49,543 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:27:49,766 [main] ERROR org.mule.module.launcher.application.DefaultMuleApplication - 
+********************************************************************************
+Message               : Failed to invoke lifecycle phase "start" on object: org.mule.module.http.internal.listener.DefaultHttpListenerConfig@6f41a9
+Element               : /HTTP_Listener_Configuration @ app:databaseconnector.xml:10 (HTTP Listener Configuration)
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bindToChannelAndAddress(TCPNIOBindingHandler.java:131)
+	at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bind(TCPNIOBindingHandler.java:88)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:238)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:218)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:209)
+	at org.mule.module.http.internal.listener.grizzly.GrizzlyServer.start(GrizzlyServer.java:41)
+	at org.mule.module.http.internal.listener.DefaultHttpListenerConfig.start(DefaultHttpListenerConfig.java:274)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:237)
+	at org.mule.lifecycle.RegistryLifecycleCallback.doApplyLifecycle(RegistryLifecycleCallback.java:99)
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:71)
+	at org.mule.lifecycle.RegistryLifecycleManager.invokePhase(RegistryLifecycleManager.java:155)
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:126)
+	at org.mule.registry.AbstractRegistryBroker.fireLifecycle(AbstractRegistryBroker.java:88)
+	at org.mule.registry.MuleRegistryHelper.fireLifecycle(MuleRegistryHelper.java:141)
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:91)
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:87)
+	at org.mule.lifecycle.MuleContextLifecycleManager.invokePhase(MuleContextLifecycleManager.java:69)
+	at org.mule.lifecycle.MuleContextLifecycleManager.fireLifecycle(MuleContextLifecycleManager.java:61)
+	at org.mule.DefaultMuleContext.start(DefaultMuleContext.java:317)
+	at org.mule.module.launcher.application.DefaultMuleApplication.start(DefaultMuleApplication.java:139)
+	at org.mule.module.launcher.artifact.ArtifactWrapper$4.execute(ArtifactWrapper.java:105)
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:136)
+	at org.mule.module.launcher.artifact.ArtifactWrapper.start(ArtifactWrapper.java:100)
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:26)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:309)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:164)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:253)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:75)
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:278)
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:150)
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:134)
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172)
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15)
+
+********************************************************************************
+
+2017-06-25 15:27:49,776 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'databaseconnector'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:27:49,796 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-06-25 15:27:49,806 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: databaseconnectorFlow
+2017-06-25 15:27:49,816 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: databaseconnectorFlow.stage1
+2017-06-25 15:27:49,818 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-06-25 15:27:50,202 [main] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@9775a9: startup date [Sun Jun 25 15:27:36 IST 2017]; root of context hierarchy
+2017-06-25 15:27:50,392 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "databaseconnector" shut down normally on: 6/25/17     *
+* 3:27 PM                                                            *
+* Up for: 0 days, 0 hours, 0 mins, 0.849 sec                         *
+**********************************************************************
+2017-06-25 15:31:48,844 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:31:49,567 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:31:49,881 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:31:50,215 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:31:50,215 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:31:50,453 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1efce9e: startup date [Sun Jun 25 15:31:50 IST 2017]; root of context hierarchy
+2017-06-25 15:31:54,713 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:31:55,922 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:31:55,922 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:31:55,922 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:31:57,086 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-06-25 15:31:58,246 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:31:58,307 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:31:59,219 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:31:59,219 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:31:59,219 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1410308
+2017-06-25 15:31:59,286 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:32:00,045 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:32:00,047 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:32:03,085 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:32:03,087 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:32:03,087 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:32:03,223 [main] ERROR org.mule.module.launcher.application.DefaultMuleApplication - 
+********************************************************************************
+Message               : Failed to invoke lifecycle phase "start" on object: org.mule.module.http.internal.listener.DefaultHttpListenerConfig@174900b
+Element               : /HTTP_Listener_Configuration @ app:databaseconnector.xml:10 (HTTP Listener Configuration)
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bindToChannelAndAddress(TCPNIOBindingHandler.java:131)
+	at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bind(TCPNIOBindingHandler.java:88)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:238)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:218)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:209)
+	at org.mule.module.http.internal.listener.grizzly.GrizzlyServer.start(GrizzlyServer.java:41)
+	at org.mule.module.http.internal.listener.DefaultHttpListenerConfig.start(DefaultHttpListenerConfig.java:274)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:237)
+	at org.mule.lifecycle.RegistryLifecycleCallback.doApplyLifecycle(RegistryLifecycleCallback.java:99)
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:71)
+	at org.mule.lifecycle.RegistryLifecycleManager.invokePhase(RegistryLifecycleManager.java:155)
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:126)
+	at org.mule.registry.AbstractRegistryBroker.fireLifecycle(AbstractRegistryBroker.java:88)
+	at org.mule.registry.MuleRegistryHelper.fireLifecycle(MuleRegistryHelper.java:141)
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:91)
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:87)
+	at org.mule.lifecycle.MuleContextLifecycleManager.invokePhase(MuleContextLifecycleManager.java:69)
+	at org.mule.lifecycle.MuleContextLifecycleManager.fireLifecycle(MuleContextLifecycleManager.java:61)
+	at org.mule.DefaultMuleContext.start(DefaultMuleContext.java:317)
+	at org.mule.module.launcher.application.DefaultMuleApplication.start(DefaultMuleApplication.java:139)
+	at org.mule.module.launcher.artifact.ArtifactWrapper$4.execute(ArtifactWrapper.java:105)
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:136)
+	at org.mule.module.launcher.artifact.ArtifactWrapper.start(ArtifactWrapper.java:100)
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:26)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:309)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:164)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:253)
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:75)
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:278)
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:150)
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:134)
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172)
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15)
+
+********************************************************************************
+
+2017-06-25 15:32:03,228 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'databaseconnector'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:32:03,229 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-06-25 15:32:03,230 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: databaseconnectorFlow
+2017-06-25 15:32:03,231 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: databaseconnectorFlow.stage1
+2017-06-25 15:32:03,233 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-06-25 15:32:03,603 [main] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@1efce9e: startup date [Sun Jun 25 15:31:50 IST 2017]; root of context hierarchy
+2017-06-25 15:32:03,623 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "databaseconnector" shut down normally on: 6/25/17     *
+* 3:32 PM                                                            *
+* Up for: 0 days, 0 hours, 0 mins, 0.528 sec                         *
+**********************************************************************
+2017-06-25 15:32:34,562 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:32:34,571 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app databaseconnector
+2017-06-25 15:32:34,585 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:32:34,600 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:32:34,700 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:32:34,702 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:32:34,713 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@501cb0: startup date [Sun Jun 25 15:32:34 IST 2017]; root of context hierarchy
+2017-06-25 15:32:35,508 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:32:35,595 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:32:35,608 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:32:35,610 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:32:35,831 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:32:35,833 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:32:35,862 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:32:35,866 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:32:35,869 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@17c958f
+2017-06-25 15:32:35,899 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:32:36,071 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:32:36,077 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:32:39,087 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:32:39,097 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:32:39,097 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:32:39,169 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:32:39,179 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:32:39,189 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:32:39,189 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:32:39,189 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:32:39,271 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:32:39,493 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:32:59,733 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:33:00,208 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:33:00,429 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:33:00,685 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:33:00,687 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:33:00,817 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@19b7332: startup date [Sun Jun 25 15:33:00 IST 2017]; root of context hierarchy
+2017-06-25 15:33:03,191 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:33:04,015 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:33:04,019 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:33:04,021 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:33:04,994 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-06-25 15:33:05,833 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:33:05,861 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:33:06,056 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:33:06,063 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:33:06,065 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1cb42a9
+2017-06-25 15:33:06,111 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:33:06,647 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:33:06,649 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:33:09,689 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:33:09,689 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:33:09,689 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:33:09,773 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:33:09,778 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:33:09,779 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:33:09,781 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:33:09,782 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:33:09,880 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:33:09,910 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:34:09,806 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - null and ParameterMap{[]}
+2017-06-25 15:34:10,211 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - [{Name=Ohm, id=1}, {Name=Thulasi, id=2}]
+2017-06-25 15:34:11,681 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/favicon.ico
+2017-06-25 15:34:11,681 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/]
+2017-06-25 15:34:11,762 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/favicon.ico
+2017-06-25 15:34:11,762 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/]
+2017-06-25 15:35:06,106 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:06,154 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: databaseconnectorFlow
+2017-06-25 15:35:06,163 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: databaseconnectorFlow.stage1
+2017-06-25 15:35:06,338 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-06-25 15:35:06,352 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8082
+2017-06-25 15:35:06,355 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-06-25 15:35:06,358 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-06-25 15:35:06,367 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'databaseconnector'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:06,385 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-06-25 15:35:06,390 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: databaseconnectorFlow
+2017-06-25 15:35:06,403 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: databaseconnectorFlow.stage1
+2017-06-25 15:35:06,407 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-06-25 15:35:06,689 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@19b7332: startup date [Sun Jun 25 15:33:00 IST 2017]; root of context hierarchy
+2017-06-25 15:35:06,857 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "databaseconnector" shut down normally on: 6/25/17     *
+* 3:35 PM                                                            *
+* Up for: 0 days, 0 hours, 1 mins, 57.56 sec                         *
+**********************************************************************
+2017-06-25 15:35:07,067 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.launcher.artifact.DefaultResourceReleaser - Unable to shutdown MySql's AbandonedConnectionCleanupThread
+java.lang.ClassNotFoundException: com.mysql.jdbc.AbandonedConnectionCleanupThread
+	at java.net.URLClassLoader.findClass(Unknown Source) ~[?:1.8.0_112]
+	at org.mule.module.launcher.FineGrainedControlClassLoader.findClass(FineGrainedControlClassLoader.java:181) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.MuleApplicationClassLoader.findClass(MuleApplicationClassLoader.java:138) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.FineGrainedControlClassLoader.loadClass(FineGrainedControlClassLoader.java:117) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:1.8.0_112]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.shutdownMySqlAbandonedConnectionCleanupThread(DefaultResourceReleaser.java:197) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.doDeregisterDriver(DefaultResourceReleaser.java:133) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.deregisterJdbcDrivers(DefaultResourceReleaser.java:84) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.release(DefaultResourceReleaser.java:38) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.artifact.AbstractArtifactClassLoader.dispose(AbstractArtifactClassLoader.java:81) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.application.CompositeApplicationClassLoader.dispose(CompositeApplicationClassLoader.java:285) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.application.DefaultMuleApplication.dispose(DefaultMuleApplication.java:310) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$1.execute(ArtifactWrapper.java:40) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:136) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.dispose(ArtifactWrapper.java:35) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.DefaultArtifactDeployer.tryToDisposeArtifact(DefaultArtifactDeployer.java:65) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.DefaultArtifactDeployer.undeploy(DefaultArtifactDeployer.java:47) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.DefaultArchiveDeployer.redeploy(DefaultArchiveDeployer.java:450) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedArtifacts(DeploymentDirectoryWatcher.java:561) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedApplications(DeploymentDirectoryWatcher.java:538) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.run(DeploymentDirectoryWatcher.java:351) ~[mule-module-launcher-3.8.3.jar:3.8.3]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_112]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+2017-06-25 15:35:07,267 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:07,298 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app databaseconnector
+2017-06-25 15:35:07,311 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:35:07,322 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:35:07,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:35:07,359 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:35:07,367 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1f17c67: startup date [Sun Jun 25 15:35:07 IST 2017]; root of context hierarchy
+2017-06-25 15:35:08,283 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:35:08,395 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:35:08,397 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:35:08,403 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:35:08,575 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:35:08,577 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:35:08,595 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:35:08,602 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:35:08,604 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3b9744
+2017-06-25 15:35:08,614 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:35:08,702 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:35:08,704 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:35:11,710 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:11,715 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:35:11,721 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:35:11,870 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:35:11,875 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:11,877 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:35:11,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:35:11,879 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:35:12,162 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:35:12,180 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:35:17,220 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:17,226 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: databaseconnectorFlow
+2017-06-25 15:35:17,230 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: databaseconnectorFlow.stage1
+2017-06-25 15:35:17,322 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-06-25 15:35:17,329 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8082
+2017-06-25 15:35:17,332 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-06-25 15:35:17,334 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-06-25 15:35:17,340 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'databaseconnector'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:17,344 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-06-25 15:35:17,347 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: databaseconnectorFlow
+2017-06-25 15:35:17,350 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: databaseconnectorFlow.stage1
+2017-06-25 15:35:17,354 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-06-25 15:35:17,405 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@1f17c67: startup date [Sun Jun 25 15:35:07 IST 2017]; root of context hierarchy
+2017-06-25 15:35:17,430 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "databaseconnector" shut down normally on: 6/25/17     *
+* 3:35 PM                                                            *
+* Up for: 0 days, 0 hours, 0 mins, 5.716 sec                         *
+**********************************************************************
+2017-06-25 15:35:17,663 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:17,676 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app databaseconnector
+2017-06-25 15:35:17,690 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app databaseconnector
+2017-06-25 15:35:17,708 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:35:17,718 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:35:17,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:35:17,758 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:35:17,770 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@15fea47: startup date [Sun Jun 25 15:35:17 IST 2017]; root of context hierarchy
+2017-06-25 15:35:18,558 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:35:18,640 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:35:18,647 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:35:18,650 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:35:18,819 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:35:18,823 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:35:18,848 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:35:18,852 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:35:18,854 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@15597ca
+2017-06-25 15:35:18,864 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:35:18,913 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:35:18,931 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:35:21,939 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:21,981 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:35:21,983 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:35:22,000 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:35:22,003 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:35:22,005 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:35:22,006 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:35:22,006 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:35:22,210 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:35:22,217 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:36:43,460 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:36:44,192 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:36:44,513 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:36:44,857 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:36:44,857 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:36:45,069 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@19b7332: startup date [Sun Jun 25 15:36:45 IST 2017]; root of context hierarchy
+2017-06-25 15:36:47,670 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:36:48,793 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:36:48,793 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:36:48,793 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:36:49,873 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-06-25 15:36:51,106 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:36:51,177 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:36:51,433 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:36:51,433 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:36:51,443 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@dd39d2
+2017-06-25 15:36:51,527 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:36:52,122 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:36:52,124 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:36:55,242 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:36:55,242 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:36:55,242 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:36:55,419 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:36:55,427 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:36:55,430 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:36:55,435 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:36:55,439 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:36:55,555 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:36:55,607 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:37:04,453 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - logger1*****************************null and ParameterMap{[]}
+2017-06-25 15:37:04,850 [[databaseconnector].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - logger2**********************[{Name=Ohm, id=1}, {Name=Thulasi, id=2}]
+2017-06-25 15:39:01,841 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:39:02,330 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:39:02,545 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:39:02,786 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:39:02,786 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:39:02,907 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@19b7332: startup date [Sun Jun 25 15:39:02 IST 2017]; root of context hierarchy
+2017-06-25 15:39:05,209 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:39:06,014 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:39:06,014 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:39:06,015 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:39:07,017 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-06-25 15:39:07,862 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:39:07,901 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:39:08,062 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:39:08,075 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:39:08,076 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1cb42a9
+2017-06-25 15:39:08,123 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:39:08,627 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:39:08,627 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:39:11,663 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:39:11,663 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:39:11,663 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:39:11,752 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:39:11,757 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:39:11,759 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:39:11,763 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:39:11,764 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:39:11,847 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:39:11,875 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:43:10,276 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:43:10,276 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: databaseconnectorFlow
+2017-06-25 15:43:10,276 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: databaseconnectorFlow.stage1
+2017-06-25 15:43:11,942 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-06-25 15:43:13,555 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8082
+2017-06-25 15:43:13,557 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-06-25 15:43:13,557 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-06-25 15:43:13,563 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'databaseconnector'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:43:13,572 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-06-25 15:43:13,574 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: databaseconnectorFlow
+2017-06-25 15:43:13,574 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: databaseconnectorFlow.stage1
+2017-06-25 15:43:13,578 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-06-25 15:43:14,699 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:43:15,182 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:43:15,435 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:43:15,706 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:43:15,709 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:43:15,867 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1a60c27: startup date [Sun Jun 25 15:43:15 IST 2017]; root of context hierarchy
+2017-06-25 15:43:18,237 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:43:18,572 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@19b7332: startup date [Sun Jun 25 15:39:02 IST 2017]; root of context hierarchy
+2017-06-25 15:43:18,750 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "databaseconnector" shut down normally on: 6/25/17     *
+* 3:43 PM                                                            *
+* Up for: 0 days, 0 hours, 4 mins, 6.947 sec                         *
+**********************************************************************
+2017-06-25 15:43:19,506 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:43:19,507 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:43:19,507 [main] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:43:20,539 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-06-25 15:43:21,777 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:43:21,848 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:43:22,102 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:43:22,102 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:43:22,112 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1902300
+2017-06-25 15:43:22,224 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:43:22,850 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:43:22,857 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:43:25,892 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:43:25,892 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:43:25,892 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:43:26,086 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:43:26,086 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:43:26,086 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:43:26,106 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:43:26,106 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:43:26,240 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:43:26,279 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:43:26,318 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:43:26,322 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: databaseconnectorFlow
+2017-06-25 15:43:26,324 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: databaseconnectorFlow.stage1
+2017-06-25 15:43:26,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-06-25 15:43:26,442 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8082
+2017-06-25 15:43:26,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-06-25 15:43:26,483 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-06-25 15:43:26,508 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'databaseconnector'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:43:26,511 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-06-25 15:43:26,515 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: databaseconnectorFlow
+2017-06-25 15:43:26,535 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: databaseconnectorFlow.stage1
+2017-06-25 15:43:26,557 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-06-25 15:43:26,870 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@1a60c27: startup date [Sun Jun 25 15:43:15 IST 2017]; root of context hierarchy
+2017-06-25 15:43:26,994 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "databaseconnector" shut down normally on: 6/25/17     *
+* 3:43 PM                                                            *
+* Up for: 0 days, 0 hours, 0 mins, 1.102 sec                         *
+**********************************************************************
+2017-06-25 15:50:02,324 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'databaseconnector'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:50:02,359 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app databaseconnector
+2017-06-25 15:50:02,359 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-06-25 15:50:02,369 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-06-25 15:50:02,424 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-06-25 15:50:02,425 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2017-06-25 15:50:02,460 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@75c575: startup date [Sun Jun 25 15:50:02 IST 2017]; root of context hierarchy
+2017-06-25 15:50:04,904 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-25 15:50:05,165 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:50:05,165 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:50:05,165 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.expression.DefaultExpressionManager - Expression string is not an expression.  Use isExpression(String) to validate first
+2017-06-25 15:50:05,555 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-tx-log\tx2.log
+2017-06-25 15:50:05,556 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx1.log and D:\Anypoint Studio\workspace2\.mule\.\.mule\databaseconnector\queue-xa-tx-log\tx2.log
+2017-06-25 15:50:05,689 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-06-25 15:50:05,689 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: databaseconnectorFlow
+2017-06-25 15:50:05,689 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@960ab3
+2017-06-25 15:50:05,709 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: databaseconnectorFlow.stage1
+2017-06-25 15:50:05,811 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:50:05,811 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\Anypoint Studio\workspace2\.mule\apps\databaseconnector\databaseconnector.xml'}]"
+2017-06-25 15:50:08,848 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:50:08,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-06-25 15:50:08,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-06-25 15:50:09,062 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8082
+2017-06-25 15:50:09,065 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:50:09,069 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-06-25 15:50:09,070 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: databaseconnectorFlow
+2017-06-25 15:50:09,071 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: databaseconnectorFlow.stage1
+2017-06-25 15:50:09,101 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-06-25 15:50:09,107 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: databaseconnector                                     *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-06-25 15:50:19,195 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'databaseconnector'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:50:19,195 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: databaseconnectorFlow
+2017-06-25 15:50:19,195 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: databaseconnectorFlow.stage1
+2017-06-25 15:50:19,317 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-06-25 15:50:19,317 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8082
+2017-06-25 15:50:19,317 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-06-25 15:50:19,317 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-06-25 15:50:19,327 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'databaseconnector'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-06-25 15:50:19,327 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-06-25 15:50:19,327 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: databaseconnectorFlow
+2017-06-25 15:50:19,327 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: databaseconnectorFlow.stage1
+2017-06-25 15:50:19,327 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-06-25 15:50:19,404 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@75c575: startup date [Sun Jun 25 15:50:02 IST 2017]; root of context hierarchy
+2017-06-25 15:50:19,569 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "databaseconnector" shut down normally on: 6/25/17     *
+* 3:50 PM                                                            *
+* Up for: 0 days, 0 hours, 0 mins, 10.720 sec                        *
+**********************************************************************
